@@ -8,11 +8,12 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.viewpager2.widget.ViewPager2
 import me.relex.circleindicator.CircleIndicator3
+import java.util.*
 
 
 class RusFragment : Fragment() {
 
-    lateinit var letterViews : List<Letter>
+    lateinit var letterViews : MutableList<Letter>
 
     lateinit var viewPager2: ViewPager2
     lateinit var circleIndicator : CircleIndicator3
@@ -55,11 +56,20 @@ class RusFragment : Fragment() {
 
     private fun addToLetterViews(){
 
-        letterViews = listOf(
-            Letter("Welcome!", R.drawable.ic_info),
-            Letter("This is the second page", R.drawable.ic_eng),
-            Letter("This is the final page", R.drawable.ic_info)
+        letterViews = mutableListOf<Letter>(
+            //Letter("Welcome!", R.drawable.ic_info),
+            //Letter("This is the second page", R.drawable.ic_eng),
+            //Letter("This is the final page", R.drawable.ic_info)
         )
+
+        var letter: Char = 'а'
+        //var letters = mutableListOf<Char>()
+        while(letter <= 'я') {
+            //letters.add(letter)
+            letterViews.add(Letter(letter.toString().uppercase(Locale.getDefault()), R.drawable.ic_info))
+            ++letter
+        }
+
 
     }
 
