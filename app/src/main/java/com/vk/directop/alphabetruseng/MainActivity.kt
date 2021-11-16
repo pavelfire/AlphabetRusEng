@@ -29,9 +29,27 @@ class MainActivity : AppCompatActivity() {
 //        }
         switch.setOnCheckedChangeListener { buttonView, isChecked ->
             if(isChecked){
-                Toast.makeText(this, "Switch on", Toast.LENGTH_SHORT).show()
+                if(bottomMenu.selectedItemId == R.id.rus_alphabet){
+                    Toast.makeText(this, "Switch on true", Toast.LENGTH_SHORT).show()
+                    val rusFragment = ListLettersFragment()
+                    replaceFragment(rusFragment)
+                }else{
+                    Toast.makeText(this, "Switch on false", Toast.LENGTH_SHORT).show()
+                    val engFragment = EngFragment()
+                    replaceFragment(engFragment)
+                }
+
             }else {
-                Toast.makeText(this, "Switch off", Toast.LENGTH_SHORT).show()
+                if(bottomMenu.selectedItemId == R.id.eng_alphabet){
+                    Toast.makeText(this, "Switch off true", Toast.LENGTH_SHORT).show()
+                    val engFragment = ListLettersEngFragment()
+                    replaceFragment(engFragment)
+                }else{
+                    Toast.makeText(this, "Switch off false", Toast.LENGTH_SHORT).show()
+                    val rusFragment = RusFragment()
+                    replaceFragment(rusFragment)
+                }
+
             }
         }
 
@@ -40,8 +58,8 @@ class MainActivity : AppCompatActivity() {
         bottomMenu.setOnItemSelectedListener {
             when(it.itemId){
                 R.id.rus_alphabet -> {
-                    val menuFragment = RusFragment()
-                    replaceFragment(menuFragment)
+                    val rusFragment = ListLettersFragment()
+                    replaceFragment(rusFragment)
                     switch.visibility = View.VISIBLE
                 }
                 R.id.eng_alphabet -> {
@@ -49,8 +67,8 @@ class MainActivity : AppCompatActivity() {
                     var mediaPlayer = MediaPlayer.create(applicationContext, R.raw.c)
                     mediaPlayer.start()
 
-                    val favoriteFragment = ListLettersFragment()
-                    replaceFragment(favoriteFragment)
+                    val engFragment = EngFragment()
+                    replaceFragment(engFragment)
                     switch.visibility = View.VISIBLE
                 }
                 R.id.about -> {

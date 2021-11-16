@@ -11,5 +11,6 @@
         Для отображения объектов используется RecyclerView и ViewPager2.
         Для открытия ссылки на другие приложения автора используется Intent.
     </string>
-    <string name="share">Тут есть всякие приложения, которые могут вам показаться интересными.</string>
+    <string name="share">Тут есть всякие приложения, которые могут вам показаться интересными.
+        \n https://play.google.com/store/apps/developer?id=Pavel+Vasilevich&amp;hl=ru&amp;gl=US</string>
 </resources>
