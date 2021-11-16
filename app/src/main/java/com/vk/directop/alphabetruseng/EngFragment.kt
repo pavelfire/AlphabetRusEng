@@ -64,7 +64,7 @@ class EngFragment : Fragment() {
 
         var letter: Char = 'a'
         while(letter <= 'z') {
-            letterViews.add(Letter(letter.toString().uppercase(Locale.getDefault()), R.drawable.ic_eng))
+            letterViews.add(Letter(letter.toString().uppercase(Locale.getDefault()), R.drawable.ic_eng, R.raw.a))
             ++letter
         }
 

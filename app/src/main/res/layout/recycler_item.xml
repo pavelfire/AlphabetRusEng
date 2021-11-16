@@ -1,21 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:id="@+id/rel_lay_item"
+    android:layout_height="wrap_content">
 
     <LinearLayout
-        android:layout_width="300dp"
+        android:id="@+id/lin_lay_item"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
         android:gravity="center"
         android:orientation="vertical">
         <TextView
             android:id="@+id/tv_description"
+            android:padding="15dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="This is some text"
-            android:textColor="@android:color/black"
-            android:textSize="200sp" />
+            android:textColor="@android:color/holo_green_dark"
+            android:textSize="120sp" />
 
         <ImageView
             android:id="@+id/iv_image"

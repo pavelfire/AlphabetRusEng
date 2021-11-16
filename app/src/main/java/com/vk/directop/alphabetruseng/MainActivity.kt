@@ -1,5 +1,6 @@
 package com.vk.directop.alphabetruseng
 
+import android.media.MediaPlayer
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -23,10 +24,17 @@ class MainActivity : AppCompatActivity() {
                     replaceFragment(menuFragment)
                 }
                 R.id.eng_alphabet -> {
-                    val favoriteFragment = EngFragment()
+                    var mediaPlayer = MediaPlayer.create(applicationContext, R.raw.c)
+                    mediaPlayer.start()
+
+                    val favoriteFragment = ListLettersFragment()
                     replaceFragment(favoriteFragment)
                 }
                 R.id.about -> {
+
+                    var mediaPlayer = MediaPlayer.create(applicationContext, R.raw.b)
+                    mediaPlayer.start()
+
                     val aboutFragment = AboutFragment()
                     replaceFragment(aboutFragment)
                 }

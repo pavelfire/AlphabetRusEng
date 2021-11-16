@@ -1,17 +1,16 @@
 package com.vk.directop.alphabetruseng
 
+import android.graphics.Color
 import android.media.MediaPlayer
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.ImageView
-import android.widget.TextView
-import android.widget.Toast
+import android.widget.*
 import androidx.recyclerview.widget.RecyclerView
 
-class LetterAdapter(letterViews: List<Letter>) :
-    RecyclerView.Adapter<LetterAdapter.LetterViewHolder>() {
+class ListAdapter (letterViews: List<Letter>) :
+    RecyclerView.Adapter<ListAdapter.LetterViewHolder>() {
 
     private val list = letterViews
 
@@ -32,16 +31,14 @@ class LetterAdapter(letterViews: List<Letter>) :
                 var mediaPlayer = MediaPlayer.create(itemView.context, letter.soundId)
                 mediaPlayer.start()
 
-
             }
-
         }
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): LetterViewHolder {
         return LetterViewHolder(
             LayoutInflater.from(parent.context)
-                .inflate(R.layout.letter_item, parent, false)
+                .inflate(R.layout.recycler_item, parent, false)
         )
     }
 
@@ -49,9 +46,24 @@ class LetterAdapter(letterViews: List<Letter>) :
         val currentView = list[position]
         val ivImage: ImageView = holder.itemView.findViewById(R.id.iv_image)
         val tvDescription: TextView = holder.itemView.findViewById(R.id.tv_description)
+        val linLayItem : LinearLayout = holder.itemView.findViewById(R.id.lin_lay_item)
+        val relLayItem : RelativeLayout = holder.itemView.findViewById(R.id.rel_lay_item)
+
+        //linLayItem.setBackgroundColor(Color.parseColor("#00aaff"))"#00aaff", "#709a54", "#f0aa88"
+
+
+        val colorsBack = listOf(R.color.color1, R.color.color2, R.color.color3, R.color.color4)
+
+//        relLayItem.setBackgroundColor(Color.parseColor(colorsBack.random().toString()))
+        //relLayItem.background = Color.parseColor(R.color.color4)//colorsBack.random())
 
         holder.bind(currentView)
 
+//        if(position == selected_item) {
+//            holder.view.setBackgroundColor(Color.parseColor("#70aaff"));
+//        } else {
+//            holder.view.setBackgroundColor(Color.parseColor("#00000")); //actually you should set to the normal text color
+//        }
 
         ivImage.setImageResource(currentView.imageId)
         tvDescription.text = currentView.name
@@ -60,6 +72,5 @@ class LetterAdapter(letterViews: List<Letter>) :
     override fun getItemCount(): Int {
         return list.size
     }
-
 
 }

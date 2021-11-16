@@ -6,6 +6,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
 import androidx.viewpager2.widget.ViewPager2
 import me.relex.circleindicator.CircleIndicator3
 import java.util.*
@@ -13,10 +14,11 @@ import java.util.*
 
 class RusFragment : Fragment() {
 
-    lateinit var letterViews : MutableList<Letter>
+    lateinit var letterViews: MutableList<Letter>
 
     lateinit var viewPager2: ViewPager2
-    lateinit var circleIndicator : CircleIndicator3
+    lateinit var circleIndicator: CircleIndicator3
+    lateinit var btnStart: Button
 
 
     override fun onCreateView(
@@ -27,6 +29,7 @@ class RusFragment : Fragment() {
 
         viewPager2 = view.findViewById(R.id.viewPager2)
         circleIndicator = view.findViewById(R.id.circleIndicator)
+        btnStart = view.findViewById(R.id.btn_start)
 
         addToLetterViews()
 
@@ -35,13 +38,13 @@ class RusFragment : Fragment() {
 
         circleIndicator.setViewPager(viewPager2)
 
-        viewPager2.registerOnPageChangeCallback(object : ViewPager2.OnPageChangeCallback(){
+        viewPager2.registerOnPageChangeCallback(object : ViewPager2.OnPageChangeCallback() {
             override fun onPageScrolled(
                 position: Int,
                 positionOffset: Float,
                 positionOffsetPixels: Int
             ) {
-                if (position == 2){
+                if (position == 2) {
                     //some action on last page
                 }
 
@@ -53,8 +56,7 @@ class RusFragment : Fragment() {
     }
 
 
-
-    private fun addToLetterViews(){
+    private fun addToLetterViews() {
 
         letterViews = mutableListOf<Letter>(
             //Letter("Welcome!", R.drawable.ic_info),
@@ -64,9 +66,15 @@ class RusFragment : Fragment() {
 
         var letter: Char = 'а'
         //var letters = mutableListOf<Char>()
-        while(letter <= 'я') {
+        while (letter <= 'я') {
             //letters.add(letter)
-            letterViews.add(Letter(letter.toString().uppercase(Locale.getDefault()), R.drawable.ic_info))
+            letterViews.add(
+                Letter(
+                    letter.toString().uppercase(Locale.getDefault()),
+                    R.drawable.ic_info,
+                    R.raw.a
+                )
+            )
             ++letter
         }
 
