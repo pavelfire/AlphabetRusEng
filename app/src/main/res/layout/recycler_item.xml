@@ -17,7 +17,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="This is some text"
-            android:textColor="@android:color/holo_green_dark"
+            android:textColor="@color/black"
             android:textSize="120sp" />
 
         <ImageView

@@ -1,5 +1,15 @@
 <resources>
     <string name="app_name">AlphabetRusEng</string>
-    <!-- TODO: Remove or change this placeholder text -->
+
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="about_text">Приложение написано на языке програмирования Kotlin,
+        для вёрстки использован xml, с исльзованием единственной Activity и фрагментов.
+        Для переключения между Fragment используется SupportFragmentManager.
+        BottomMenu из Material Design для навигации между фрагментами.
+        Для сохранения выбранной вкладки после пересоздания используется переменная в
+        onSaveInstanceState, наличие значения которой проверяется в onCreate при создании.
+        Для отображения объектов используется RecyclerView и ViewPager2.
+        Для открытия ссылки на другие приложения автора используется Intent.
+    </string>
+    <string name="share">Тут есть всякие приложения, которые могут вам показаться интересными.</string>
 </resources>
