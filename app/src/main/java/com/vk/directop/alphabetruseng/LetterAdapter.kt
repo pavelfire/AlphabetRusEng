@@ -22,14 +22,14 @@ class LetterAdapter(letterViews: List<Letter>) :
         fun bind(letter: Letter) {
             val tvDescription: TextView = itemView.findViewById(R.id.tv_description)
             tvDescription.setOnClickListener {
-                Toast.makeText(
-                    itemView.context,
-                    //" ${name.text} : ${aNumber.text}",
-                    "Element pressed",
-                    Toast.LENGTH_LONG
-                ).show()
-
-                Log.d("MyTag", "Pressed ")
+//                Toast.makeText(
+//                    itemView.context,
+//                    //" ${name.text} : ${aNumber.text}",
+//                    "Element pressed",
+//                    Toast.LENGTH_LONG
+//                ).show()
+//
+//                Log.d("MyTag", "Pressed ")
 
                 var mediaPlayer = MediaPlayer.create(itemView.context, letter.soundId)
                 mediaPlayer.start()

@@ -9,7 +9,7 @@
         />
     <item
         android:id="@+id/eng_alphabet"
-        android:icon="@drawable/ic_eng"
+        android:icon="@drawable/ic_chrome"
         android:title="ENG"
         />
     <item
