@@ -7,6 +7,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import android.widget.Switch
 import androidx.viewpager2.widget.ViewPager2
 import me.relex.circleindicator.CircleIndicator3
 import java.util.*
@@ -19,7 +20,6 @@ class RusFragment : Fragment() {
     lateinit var viewPager2: ViewPager2
     lateinit var circleIndicator: CircleIndicator3
     lateinit var btnStart: Button
-
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,

@@ -5,10 +5,11 @@
       <map>
         <entry key="..\:/ASProj/alphabetruseng/app/src/main/res/drawable/round_button.xml" value="0.3671875" />
         <entry key="..\:/ASProj/alphabetruseng/app/src/main/res/drawable/round_corner.xml" value="0.3671875" />
-        <entry key="..\:/ASProj/alphabetruseng/app/src/main/res/layout/activity_main.xml" value="0.3079710144927536" />
+        <entry key="..\:/ASProj/alphabetruseng/app/src/main/res/layout/activity_main.xml" value="0.19479166666666667" />
         <entry key="..\:/ASProj/alphabetruseng/app/src/main/res/layout/fragment_about.xml" value="0.3079710144927536" />
         <entry key="..\:/ASProj/alphabetruseng/app/src/main/res/layout/fragment_eng.xml" value="0.14791666666666667" />
         <entry key="..\:/ASProj/alphabetruseng/app/src/main/res/layout/fragment_list_letters.xml" value="0.1" />
+        <entry key="..\:/ASProj/alphabetruseng/app/src/main/res/layout/fragment_rus.xml" value="0.19479166666666667" />
         <entry key="..\:/ASProj/alphabetruseng/app/src/main/res/layout/letter_item.xml" value="0.1" />
         <entry key="..\:/ASProj/alphabetruseng/app/src/main/res/layout/recycler_item.xml" value="0.3079710144927536" />
         <entry key="..\:/ASProj/alphabetruseng/app/src/main/res/menu/bottom_navigation.xml" value="0.19479166666666667" />
