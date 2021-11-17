@@ -51,14 +51,18 @@ class MainActivity : AppCompatActivity() {
         bottomMenu.setOnItemSelectedListener {
             when(it.itemId){
                 R.id.rus_alphabet -> {
+
+//                    var mediaPlayer = MediaPlayer.create(applicationContext, R.raw.muz_sound)
+//                    mediaPlayer.start()
+
                     val rusFragment = ListLettersFragment()
                     replaceFragment(rusFragment)
                     switch.visibility = View.VISIBLE
                 }
                 R.id.eng_alphabet -> {
 
-                    var mediaPlayer = MediaPlayer.create(applicationContext, R.raw.c)
-                    mediaPlayer.start()
+//                    var mediaPlayer = MediaPlayer.create(applicationContext, R.raw.muz_sound)
+//                    mediaPlayer.start()
 
                     val engFragment = EngFragment()
                     replaceFragment(engFragment)
@@ -66,8 +70,8 @@ class MainActivity : AppCompatActivity() {
                 }
                 R.id.about -> {
 
-                    var mediaPlayer = MediaPlayer.create(applicationContext, R.raw.b)
-                    mediaPlayer.start()
+//                    var mediaPlayer = MediaPlayer.create(applicationContext, R.raw.muz_sound)
+//                    mediaPlayer.start()
 
                     val aboutFragment = AboutFragment()
                     replaceFragment(aboutFragment)

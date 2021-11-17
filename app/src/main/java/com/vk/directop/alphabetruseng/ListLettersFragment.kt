@@ -20,7 +20,7 @@ class ListLettersFragment : Fragment() {
     ): View? {
         val view = inflater.inflate(R.layout.fragment_list_letters, container, false)
 
-        addToLetterViews()
+        letterViews = addToLetterViews()
 
         val itemsRecyclerView: RecyclerView = view.findViewById(R.id.items_recycler_view)
         itemsRecyclerView.layoutManager =
@@ -37,27 +37,27 @@ class ListLettersFragment : Fragment() {
         return view
     }
 
-    private fun addToLetterViews() {
-
-        letterViews = mutableListOf<Letter>(
-            //Letter("Welcome!", R.drawable.ic_info),
-            //Letter("This is the second page", R.drawable.ic_eng),
-            //Letter("This is the final page", R.drawable.ic_info)
-        )
-
-        var letter: Char = 'а'
-        //var letters = mutableListOf<Char>()
-        while (letter <= 'я') {
-            //letters.add(letter)
-            letterViews.add(
-                Letter(
-                    letter.toString().uppercase(Locale.getDefault()),
-                    R.drawable.ic_info,
-                    R.raw.a
-                )
-            )
-            ++letter
-        }
-    }
+//    private fun addToLetterViews() {
+//
+//        letterViews = mutableListOf<Letter>(
+//            //Letter("Welcome!", R.drawable.ic_info),
+//            //Letter("This is the second page", R.drawable.ic_eng),
+//            //Letter("This is the final page", R.drawable.ic_info)
+//        )
+//
+//        var letter: Char = 'а'
+//        //var letters = mutableListOf<Char>()
+//        while (letter <= 'я') {
+//            //letters.add(letter)
+//            letterViews.add(
+//                Letter(
+//                    letter.toString().uppercase(Locale.getDefault()),
+//                    R.drawable.ic_info,
+//                    R.raw.a
+//                )
+//            )
+//            ++letter
+//        }
+//    }
 
 }

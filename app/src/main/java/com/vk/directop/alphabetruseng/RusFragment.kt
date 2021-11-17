@@ -31,7 +31,7 @@ class RusFragment : Fragment() {
         circleIndicator = view.findViewById(R.id.circleIndicator)
         btnStart = view.findViewById(R.id.btn_start)
 
-        addToLetterViews()
+        letterViews = addToLetterViews()
 
         viewPager2.adapter = LetterAdapter(letterViews)
         viewPager2.orientation = ViewPager2.ORIENTATION_HORIZONTAL
@@ -56,36 +56,6 @@ class RusFragment : Fragment() {
     }
 
 
-    private fun addToLetterViews() {
 
-        letterViews = mutableListOf<Letter>(
-//            Letter("", R.drawable. , R.raw. ),
-            Letter("А", R.drawable.arbuz , R.raw.a ),
-                    Letter("Б", R.drawable.belka , R.raw.b ),
-            Letter("В", R.drawable.volk , R.raw.c ),
-            Letter("Г", R.drawable.grib , R.raw.a ),
-            Letter("Д", R.drawable.dom , R.raw.a ),
-            Letter("Е", R.drawable.enot , R.raw.a ),
-            //Letter("Welcome!", R.drawable.ic_info),
-            //Letter("This is the second page", R.drawable.ic_eng),
-            //Letter("This is the final page", R.drawable.ic_info)
-        )
-
-        var letter: Char = 'а'
-        //var letters = mutableListOf<Char>()
-        while (letter <= 'я') {
-            //letters.add(letter)
-            letterViews.add(
-                Letter(
-                    letter.toString().uppercase(Locale.getDefault()),
-                    R.drawable.arbuz,
-                    R.raw.a
-                )
-            )
-            ++letter
-        }
-
-
-    }
 
 }
