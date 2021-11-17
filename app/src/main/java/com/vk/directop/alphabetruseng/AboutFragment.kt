@@ -18,11 +18,11 @@ class AboutFragment : Fragment() {
 
         val view = inflater.inflate(R.layout.fragment_about, container, false)
 
-        val btnShare : Button = view.findViewById(R.id.btn_share)
+        val btnShare: Button = view.findViewById(R.id.btn_share)
 
         val intent = Intent(Intent.ACTION_SEND)
         intent.type = "text/plain"
-        intent.putExtra(Intent.EXTRA_TEXT, getString(R.string.share ))
+        intent.putExtra(Intent.EXTRA_TEXT, getString(R.string.share))
         val chooser = Intent.createChooser(intent, "Поделиться!")
         btnShare.setOnClickListener {
             startActivity(chooser)

@@ -4,18 +4,15 @@
     <item
         android:id="@+id/rus_alphabet"
         android:enabled="true"
-        android:title="RUS"
         android:icon="@drawable/ic_rus_abc"
-        />
+        android:title="RUS" />
     <item
         android:id="@+id/eng_alphabet"
         android:icon="@drawable/ic_chrome"
-        android:title="ENG"
-        />
+        android:title="ENG" />
     <item
         android:id="@+id/about"
         android:icon="@drawable/ic_info"
-        android:title="About"
-        />
+        android:title="About" />
 
 </menu>

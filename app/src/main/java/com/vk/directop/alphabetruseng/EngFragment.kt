@@ -12,10 +12,9 @@ import java.util.*
 
 class EngFragment : Fragment() {
 
-    lateinit var letterViews : MutableList<Letter>
+    lateinit var letterViews: MutableList<Letter>
 
     lateinit var viewPager2: ViewPager2
-    lateinit var circleIndicator : CircleIndicator3
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -25,23 +24,20 @@ class EngFragment : Fragment() {
 
 
         viewPager2 = view.findViewById(R.id.viewPager2)
-        circleIndicator = view.findViewById(R.id.circleIndicator)
 
         addToLetterViews()
 
         viewPager2.adapter = LetterAdapter(letterViews)
         viewPager2.orientation = ViewPager2.ORIENTATION_HORIZONTAL
 
-        circleIndicator.setViewPager(viewPager2)
-
-        viewPager2.registerOnPageChangeCallback(object : ViewPager2.OnPageChangeCallback(){
+        viewPager2.registerOnPageChangeCallback(object : ViewPager2.OnPageChangeCallback() {
             override fun onPageScrolled(
                 position: Int,
                 positionOffset: Float,
                 positionOffsetPixels: Int
             ) {
-                if (position == 2){
-                    //some action on last page
+                if (position == 2) {
+                    //some action on this page
                 }
                 super.onPageScrolled(position, positionOffset, positionOffsetPixels)
             }
@@ -49,13 +45,19 @@ class EngFragment : Fragment() {
         return view
     }
 
-    private fun addToLetterViews(){
+    private fun addToLetterViews() {
 
-        letterViews = mutableListOf( )
+        letterViews = mutableListOf()
 
         var letter: Char = 'a'
-        while(letter <= 'z') {
-            letterViews.add(Letter(letter.toString().uppercase(Locale.getDefault()), R.drawable.ic_eng, R.raw.a))
+        while (letter <= 'z') {
+            letterViews.add(
+                Letter(
+                    letter.toString().uppercase(Locale.getDefault()),
+                    R.drawable.ic_eng,
+                    R.raw.a
+                )
+            )
             ++letter
         }
     }

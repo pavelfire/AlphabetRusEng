@@ -13,8 +13,8 @@ private const val LAST_SELECTED_MENU = "LAST_SELECTED_MENU"
 
 class MainActivity : AppCompatActivity() {
 
-    private lateinit var bottomMenu : BottomNavigationView
-    private lateinit var switch : Switch
+    private lateinit var bottomMenu: BottomNavigationView
+    private lateinit var switch: Switch
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -23,33 +23,33 @@ class MainActivity : AppCompatActivity() {
         bottomMenu = findViewById(R.id.bottom_nav)
 
         switch.setOnCheckedChangeListener { buttonView, isChecked ->
-            if(isChecked){
-                if(bottomMenu.selectedItemId == R.id.rus_alphabet){
+            if (isChecked) {
+                if (bottomMenu.selectedItemId == R.id.rus_alphabet) {
                     //Toast.makeText(this, "Switch on true", Toast.LENGTH_SHORT).show()
-                    val rusFragment = ListLettersFragment()
-                    replaceFragment(rusFragment)
-                }else{
-                    //Toast.makeText(this, "Switch on false", Toast.LENGTH_SHORT).show()
-                    val engFragment = EngFragment()
-                    replaceFragment(engFragment)
-                }
-
-            }else {
-                if(bottomMenu.selectedItemId == R.id.eng_alphabet){
-                    //Toast.makeText(this, "Switch off true", Toast.LENGTH_SHORT).show()
-                    val engFragment = ListLettersEngFragment()
-                    replaceFragment(engFragment)
-                }else{
-                    //Toast.makeText(this, "Switch off false", Toast.LENGTH_SHORT).show()
                     val rusFragment = RusFragment()
                     replaceFragment(rusFragment)
+
+                } else {
+                    //Toast.makeText(this, "Switch on false", Toast.LENGTH_SHORT).show()
+                    val engFragment = ListLettersEngFragment()
+                    replaceFragment(engFragment)
                 }
 
+            } else {
+                if (bottomMenu.selectedItemId == R.id.eng_alphabet) {
+                    //Toast.makeText(this, "Switch off true", Toast.LENGTH_SHORT).show()
+                    val engFragment = EngFragment()
+                    replaceFragment(engFragment)
+                } else {
+                    //Toast.makeText(this, "Switch off false", Toast.LENGTH_SHORT).show()
+                    val rusFragment = ListLettersFragment()
+                    replaceFragment(rusFragment)
+                }
             }
         }
 
         bottomMenu.setOnItemSelectedListener {
-            when(it.itemId){
+            when (it.itemId) {
                 R.id.rus_alphabet -> {
 
 //                    var mediaPlayer = MediaPlayer.create(applicationContext, R.raw.muz_sound)
@@ -90,6 +90,7 @@ class MainActivity : AppCompatActivity() {
         bottomMenu.selectedItemId =
             savedInstanceState?.getInt(LAST_SELECTED_MENU) ?: R.id.rus_alphabet
     }
+
     private fun replaceFragment(fragment: Fragment) {
         supportFragmentManager // обращаемся к fm
             .beginTransaction() //начать транзакцию
