@@ -22,38 +22,31 @@ class MainActivity : AppCompatActivity() {
         switch = findViewById(R.id.switch1)
         bottomMenu = findViewById(R.id.bottom_nav)
 
-//        if(switch.isActivated){
-//            Toast.makeText(this, "Switch on", Toast.LENGTH_SHORT).show()
-//        }else {
-//            Toast.makeText(this, "Switch off", Toast.LENGTH_SHORT).show()
-//        }
         switch.setOnCheckedChangeListener { buttonView, isChecked ->
             if(isChecked){
                 if(bottomMenu.selectedItemId == R.id.rus_alphabet){
-                    Toast.makeText(this, "Switch on true", Toast.LENGTH_SHORT).show()
+                    //Toast.makeText(this, "Switch on true", Toast.LENGTH_SHORT).show()
                     val rusFragment = ListLettersFragment()
                     replaceFragment(rusFragment)
                 }else{
-                    Toast.makeText(this, "Switch on false", Toast.LENGTH_SHORT).show()
+                    //Toast.makeText(this, "Switch on false", Toast.LENGTH_SHORT).show()
                     val engFragment = EngFragment()
                     replaceFragment(engFragment)
                 }
 
             }else {
                 if(bottomMenu.selectedItemId == R.id.eng_alphabet){
-                    Toast.makeText(this, "Switch off true", Toast.LENGTH_SHORT).show()
+                    //Toast.makeText(this, "Switch off true", Toast.LENGTH_SHORT).show()
                     val engFragment = ListLettersEngFragment()
                     replaceFragment(engFragment)
                 }else{
-                    Toast.makeText(this, "Switch off false", Toast.LENGTH_SHORT).show()
+                    //Toast.makeText(this, "Switch off false", Toast.LENGTH_SHORT).show()
                     val rusFragment = RusFragment()
                     replaceFragment(rusFragment)
                 }
 
             }
         }
-
-
 
         bottomMenu.setOnItemSelectedListener {
             when(it.itemId){

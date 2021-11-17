@@ -50,28 +50,21 @@ class ListAdapter(letterViews: List<Letter>) :
         val linLayItem: LinearLayout = holder.itemView.findViewById(R.id.lin_lay_item)
         val relLayItem: RelativeLayout = holder.itemView.findViewById(R.id.rel_lay_item)
 
-        //linLayItem.setBackgroundColor(Color.parseColor("#00aaff"))"#00aaff", "#709a54", "#f0aa88"
-
         //.setBackgroundColor(ContextCompat.getColor(applicationContext, R.color.colorAccent))
 
         //val colorsBack = listOf(R.color.color1, R.color.color2, R.color.color3, R.color.color4)
-//        val colorsBackground = listOf("#5EE35E", "#E3A75E", "#5EC4E3", "#E35E88", "#5EE3C4",
-//        "#E3695E", "#E38D5E", "#5E74E3", "#9CE35E", "#CB5EE3","#E35E5E")
+//        val colorsBackground = listOf(
+//            "#5EE35E", "#E3A75E", "#5EC4E3", "#E35E88", "#5EE3C4",
+//            "#E3695E", "#E38D5E", "#5E74E3", "#9CE35E", "#CB5EE3", "#E35E5E"
+//        )
         val colorsBackground = listOf(
             "#B2D3B2", "#D3B2B2", "#D3BEB2", "#D2D3B2", "#C6D3B2",
             "#B2D3CF", "#B2D3B2", "#B2B5D3", "#CEB2D3", "#B7B2D3", "#D3B2B6"
         )
 
         relLayItem.setBackgroundColor(Color.parseColor(colorsBackground.random().toString()))
-        //relLayItem.background = Color.parseColor(R.color.color4)//colorsBack.random())
 
         holder.bind(currentView)
-
-//        if(position == selected_item) {
-//            holder.view.setBackgroundColor(Color.parseColor("#70aaff"));
-//        } else {
-//            holder.view.setBackgroundColor(Color.parseColor("#00000")); //actually you should set to the normal text color
-//        }
 
         ivImage.setImageResource(currentView.imageId)
         tvDescription.text = currentView.name

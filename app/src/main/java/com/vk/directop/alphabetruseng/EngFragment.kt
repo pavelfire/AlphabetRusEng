@@ -17,8 +17,6 @@ class EngFragment : Fragment() {
     lateinit var viewPager2: ViewPager2
     lateinit var circleIndicator : CircleIndicator3
 
-
-
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -45,31 +43,21 @@ class EngFragment : Fragment() {
                 if (position == 2){
                     //some action on last page
                 }
-
                 super.onPageScrolled(position, positionOffset, positionOffsetPixels)
             }
         })
-
         return view
     }
 
-
     private fun addToLetterViews(){
 
-        letterViews = mutableListOf(
-//            Letter("Welcome!", R.drawable.ic_info),
-//            Letter("This is the second page", R.drawable.ic_eng),
-//            Letter("This is the final page", R.drawable.ic_info)
-        )
+        letterViews = mutableListOf( )
 
         var letter: Char = 'a'
         while(letter <= 'z') {
             letterViews.add(Letter(letter.toString().uppercase(Locale.getDefault()), R.drawable.ic_eng, R.raw.a))
             ++letter
         }
-
-
     }
-
 
 }

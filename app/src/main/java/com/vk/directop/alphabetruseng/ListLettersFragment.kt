@@ -34,7 +34,6 @@ class ListLettersFragment : Fragment() {
         )
         itemsRecyclerView.adapter = ListAdapter(letterViews)
 
-
         return view
     }
 

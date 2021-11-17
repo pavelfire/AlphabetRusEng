@@ -60,7 +60,6 @@ class LetterAdapter(letterViews: List<Letter>) :
 
         relLayItem.setBackgroundColor(Color.parseColor(colorsBackground.random().toString()))
 
-
         ivImage.setImageResource(currentView.imageId)
         tvDescription.text = currentView.name
     }

@@ -34,17 +34,12 @@ class ListLettersEngFragment : Fragment() {
         )
         itemsRecyclerView.adapter = ListAdapter(letterViews)
 
-
         return view
     }
 
     private fun addToLetterViews() {
 
-        letterViews = mutableListOf<Letter>(
-            //Letter("Welcome!", R.drawable.ic_info),
-            //Letter("This is the second page", R.drawable.ic_eng),
-            //Letter("This is the final page", R.drawable.ic_info)
-        )
+        letterViews = mutableListOf()
 
         var letter: Char = 'a'
         //var letters = mutableListOf<Char>()
