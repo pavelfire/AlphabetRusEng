@@ -59,6 +59,13 @@ class RusFragment : Fragment() {
     private fun addToLetterViews() {
 
         letterViews = mutableListOf<Letter>(
+//            Letter("", R.drawable. , R.raw. ),
+            Letter("А", R.drawable.arbuz , R.raw.a ),
+                    Letter("Б", R.drawable.belka , R.raw.b ),
+            Letter("В", R.drawable.volk , R.raw.c ),
+            Letter("Г", R.drawable.grib , R.raw.a ),
+            Letter("Д", R.drawable.dom , R.raw.a ),
+            Letter("Е", R.drawable.enot , R.raw.a ),
             //Letter("Welcome!", R.drawable.ic_info),
             //Letter("This is the second page", R.drawable.ic_eng),
             //Letter("This is the final page", R.drawable.ic_info)
@@ -71,7 +78,7 @@ class RusFragment : Fragment() {
             letterViews.add(
                 Letter(
                     letter.toString().uppercase(Locale.getDefault()),
-                    R.drawable.ic_info,
+                    R.drawable.arbuz,
                     R.raw.a
                 )
             )
