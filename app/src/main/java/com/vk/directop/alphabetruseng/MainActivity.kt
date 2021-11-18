@@ -22,30 +22,28 @@ class MainActivity : AppCompatActivity() {
         switch = findViewById(R.id.switch1)
         bottomMenu = findViewById(R.id.bottom_nav)
 
-        switch.setOnCheckedChangeListener { buttonView, isChecked ->
-            if (isChecked) {
-                if (bottomMenu.selectedItemId == R.id.rus_alphabet) {
-                    //Toast.makeText(this, "Switch on true", Toast.LENGTH_SHORT).show()
-                    val rusFragment = RusFragment()
-                    replaceFragment(rusFragment)
+        switch.setOnCheckedChangeListener { _, isChecked ->
+            if (isChecked && bottomMenu.selectedItemId == R.id.rus_alphabet) {
+                //Toast.makeText(this, "Switch on true", Toast.LENGTH_SHORT).show()
+                val rusFragment = RusFragment()
+                replaceFragment(rusFragment)
 
-                } else {
-                    //Toast.makeText(this, "Switch on false", Toast.LENGTH_SHORT).show()
-                    val engFragment = ListLettersEngFragment()
-                    replaceFragment(engFragment)
-                }
+            } else if (isChecked && bottomMenu.selectedItemId != R.id.rus_alphabet) {
+                //Toast.makeText(this, "Switch on false", Toast.LENGTH_SHORT).show()
+                val engFragment = ListLettersEngFragment()
+                replaceFragment(engFragment)
+            } else if (!isChecked && bottomMenu.selectedItemId == R.id.rus_alphabet) {
 
-            } else {
-                if (bottomMenu.selectedItemId == R.id.eng_alphabet) {
-                    //Toast.makeText(this, "Switch off true", Toast.LENGTH_SHORT).show()
-                    val engFragment = EngFragment()
-                    replaceFragment(engFragment)
-                } else {
-                    //Toast.makeText(this, "Switch off false", Toast.LENGTH_SHORT).show()
-                    val rusFragment = ListLettersFragment()
-                    replaceFragment(rusFragment)
-                }
+                //Toast.makeText(this, "Switch off true", Toast.LENGTH_SHORT).show()
+                val rusFragment = ListLettersFragment()
+                replaceFragment(rusFragment)
+
+            } else if (!isChecked && bottomMenu.selectedItemId != R.id.rus_alphabet) {
+                //Toast.makeText(this, "Switch off false", Toast.LENGTH_SHORT).show()
+                val engFragment = EngFragment()
+                replaceFragment(engFragment)
             }
+
         }
 
         bottomMenu.setOnItemSelectedListener {
@@ -54,19 +52,21 @@ class MainActivity : AppCompatActivity() {
 
 //                    var mediaPlayer = MediaPlayer.create(applicationContext, R.raw.muz_sound)
 //                    mediaPlayer.start()
-
+                    switch.isChecked = false
                     val rusFragment = ListLettersFragment()
                     replaceFragment(rusFragment)
                     switch.visibility = View.VISIBLE
+
                 }
                 R.id.eng_alphabet -> {
 
 //                    var mediaPlayer = MediaPlayer.create(applicationContext, R.raw.muz_sound)
 //                    mediaPlayer.start()
-
+                    switch.isChecked = false
                     val engFragment = EngFragment()
                     replaceFragment(engFragment)
                     switch.visibility = View.VISIBLE
+
                 }
                 R.id.about -> {
 
