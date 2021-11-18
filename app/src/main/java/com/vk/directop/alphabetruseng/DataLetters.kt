@@ -5,7 +5,6 @@ class DataLetters {
 
 
 fun addToLetterViews(): MutableList<Letter> {
-
     return mutableListOf<Letter>(
         Letter("А", R.drawable.arbuz, R.raw.a),
         Letter("Б", R.drawable.belka, R.raw.b),
@@ -41,6 +40,7 @@ fun addToLetterViews(): MutableList<Letter> {
         Letter("Ю", R.drawable.yula, R.raw.yu),
         Letter("Я", R.drawable.yabloko, R.raw.ya)
     )
+
 //        var letter: Char = 'а'
 //        //var letters = mutableListOf<Char>()
 //        while (letter <= 'я') {
@@ -54,4 +54,36 @@ fun addToLetterViews(): MutableList<Letter> {
 //            )
 //            ++letter
 //        }
+}
+
+fun addToEngLetterViews(): MutableList<Letter> {
+    return mutableListOf<Letter>(
+        //Letter("", R.drawable., R.raw.),
+        Letter("A", R.drawable.apple, R.raw.e_a),
+        Letter("B", R.drawable.butterfly, R.raw.e_b),
+        Letter("C", R.drawable.cat, R.raw.e_c),
+        Letter("D", R.drawable.dog, R.raw.e_d),
+        Letter("E", R.drawable.elephant, R.raw.e_e),
+        Letter("F", R.drawable.fish, R.raw.e_f),
+        Letter("G", R.drawable.giraffe, R.raw.e_g),
+        Letter("H", R.drawable.horse, R.raw.e_h),
+        Letter("I", R.drawable.ice_scream, R.raw.e_i),
+        Letter("J", R.drawable.jam, R.raw.e_j),
+        Letter("K", R.drawable.key, R.raw.e_k),
+        Letter("L", R.drawable.lemon, R.raw.e_l),
+        Letter("M", R.drawable.mirror, R.raw.e_m),
+        Letter("N", R.drawable.nut, R.raw.e_n),
+        Letter("O", R.drawable.owl, R.raw.e_o),
+        Letter("P", R.drawable.penguin, R.raw.e_p),
+        Letter("Q", R.drawable.quilt, R.raw.e_q),
+        Letter("R", R.drawable.rabbit, R.raw.e_r),
+        Letter("S", R.drawable.strawberry, R.raw.e_s),
+        Letter("T", R.drawable.turtle, R.raw.e_t),
+        Letter("U", R.drawable.umbrella, R.raw.e_u),
+        Letter("V", R.drawable.vessel, R.raw.e_v),
+        Letter("W", R.drawable.window, R.raw.e_w),
+        Letter("X", R.drawable.xylophone, R.raw.e_x),
+        Letter("Y", R.drawable.yacht, R.raw.e_y),
+        Letter("Z", R.drawable.zebra_en, R.raw.e_z)
+        )
 }

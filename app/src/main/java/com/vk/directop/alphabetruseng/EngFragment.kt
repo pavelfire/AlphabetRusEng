@@ -24,7 +24,7 @@ class EngFragment : Fragment() {
 
         viewPager2 = view.findViewById(R.id.viewPager2)
 
-        addToLetterViews()
+        letterViews = addToEngLetterViews()
 
         viewPager2.adapter = LetterAdapter(letterViews)
         viewPager2.orientation = ViewPager2.ORIENTATION_HORIZONTAL

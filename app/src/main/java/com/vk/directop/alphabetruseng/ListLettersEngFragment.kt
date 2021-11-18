@@ -20,7 +20,7 @@ class ListLettersEngFragment : Fragment() {
     ): View? {
         val view = inflater.inflate(R.layout.fragment_list_letters, container, false)
 
-        addToLetterViews()
+        letterViews = addToEngLetterViews()
 
         val itemsRecyclerView: RecyclerView = view.findViewById(R.id.items_recycler_view)
         itemsRecyclerView.layoutManager =
