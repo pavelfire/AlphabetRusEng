@@ -11,16 +11,15 @@ import java.util.*
 
 class EngFragment : Fragment() {
 
-    lateinit var letterViews: MutableList<Letter>
+    private lateinit var letterViews: MutableList<Letter>
 
-    lateinit var viewPager2: ViewPager2
+    private lateinit var viewPager2: ViewPager2
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         val view = inflater.inflate(R.layout.fragment_eng, container, false)
-
 
         viewPager2 = view.findViewById(R.id.viewPager2)
 
@@ -44,21 +43,21 @@ class EngFragment : Fragment() {
         return view
     }
 
-    private fun addToLetterViews() {
-
-        letterViews = mutableListOf()
-
-        var letter: Char = 'a'
-        while (letter <= 'z') {
-            letterViews.add(
-                Letter(
-                    letter.toString().uppercase(Locale.getDefault()),
-                    R.drawable.ic_eng,
-                    R.raw.a
-                )
-            )
-            ++letter
-        }
-    }
+//    private fun addToLetterViews() {
+//
+//        letterViews = mutableListOf()
+//
+//        var letter: Char = 'a'
+//        while (letter <= 'z') {
+//            letterViews.add(
+//                Letter(
+//                    letter.toString().uppercase(Locale.getDefault()),
+//                    R.drawable.ic_eng,
+//                    R.raw.a
+//                )
+//            )
+//            ++letter
+//        }
+//    }
 
 }

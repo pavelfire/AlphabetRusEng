@@ -37,23 +37,23 @@ class ListLettersEngFragment : Fragment() {
         return view
     }
 
-    private fun addToLetterViews() {
-
-        letterViews = mutableListOf()
-
-        var letter: Char = 'a'
-        //var letters = mutableListOf<Char>()
-        while (letter <= 'z') {
-            //letters.add(letter)
-            letterViews.add(
-                Letter(
-                    letter.toString().uppercase(Locale.getDefault()),
-                    R.drawable.ic_info,
-                    R.raw.a
-                )
-            )
-            ++letter
-        }
-    }
+//    private fun addToLetterViews() {
+//
+//        letterViews = mutableListOf()
+//
+//        var letter: Char = 'a'
+//        //var letters = mutableListOf<Char>()
+//        while (letter <= 'z') {
+//            //letters.add(letter)
+//            letterViews.add(
+//                Letter(
+//                    letter.toString().uppercase(Locale.getDefault()),
+//                    R.drawable.ic_info,
+//                    R.raw.a
+//                )
+//            )
+//            ++letter
+//        }
+//    }
 
 }
